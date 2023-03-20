@@ -1,0 +1,8 @@
+Liste des choses à faire :
+Idée globale du projet : 
+Récupérer sur différents sites immoblier les annonces d'appartement dans une zone (précisée dans la recherche ?)
+
+Pour le back :
+Choisir les sites où on va aller chercher les annonces
+Comment récupérer ces annonces
+Où les stocker
