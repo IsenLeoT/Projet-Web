@@ -1,6 +1,7 @@
 //test push premier fichier
 
 /*
+Notes globales cf cahier des charges
 Notes sur le site https://www.avendrealouer.fr/location/lille-59/b-appartement/loc-101-27228.html 
 Chemin vers le prix : price <- class = "Listing price value" <- class = "Listing price" <- class =" Listing item content " 
 <- class = "Listing item body " <- class = "Listing item"
@@ -33,10 +34,15 @@ class GenericRequestPoster{
     processResponse(Text){
         let ApiUrl = 'http://localhost:5000/tempo_data';//remplacer après par le chemin vers la base de données (BD)
         let ApiRequest = new XMLHttpRequest();
-        ApiRequest.open("GET",ApiUrl,true)//remplacer le get si il faut par un post selon la BD
+        ApiRequest.open("POST",ApiUrl,true)//remplacer le post si il faut par un get selon la BD
         ApiRequest.setRequestHeader("Content-type","application/json");//prévient l'api qu'on va lui envoyer un format json
         ApiRequest.send(JSON.stringify(Text));
     }
 
-    processRequest(RawData)
+    processRequest(RawData){
+        this.httpRequester.open("POST",this.url,true);
+        this.httpRequester.setRequestHeader("Content-type","application/json");
+        this.httpRequester.onload = () => {this.processResponse(this.httpRequeseter.Text)};
+        this.httpRequester.send(JSON.stringify(RawData));
+    }
 }

@@ -6,3 +6,10 @@ Pour le back :
 Choisir les sites où on va aller chercher les annonces
 Comment récupérer ces annonces
 Où les stocker
+
+Infos dont le front à besoin : 
+-prix
+-localisation (ville)
+-type de bien (appart, maison, terrain)
+-photo 
+-texte descriptif 
