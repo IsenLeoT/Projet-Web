@@ -46,3 +46,16 @@ class GenericRequestPoster{
         this.httpRequester.send(JSON.stringify(RawData));
     }
 }
+class bien_immo{
+    constructor(){
+        this.price = "defaut";
+        this.city = "defaut";
+        this.type = "defaut";
+        this.photo = "defaut";
+        this.desc = "defaut";
+
+    }
+}
+class avendrealouer_request extends bien_immo{
+    
+}
